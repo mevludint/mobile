@@ -1,0 +1,40 @@
+{
+  "build": {
+    "production": {
+      "channel": "production",
+      "distribution": "store",
+      "android": {
+        "image": "latest",
+        "buildType": "apk",
+        "credentialsSource": "local"
+      },
+      "ios": {
+        "credentialsSource": "local",
+        "resourceClass": "m-medium"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "channel": "development"
+    },
+    "staging": {
+      "distribution": "store",
+      "android": {
+        "image": "latest",
+        "buildType": "apk"
+      },
+      "ios": {
+        "credentialsSource": "local",
+        "resourceClass": "m-medium"
+      },
+      "channel": "staging"
+    }
+  },
+  "cli": {
+    "promptToConfigurePushNotifications": false
+  }
+}
